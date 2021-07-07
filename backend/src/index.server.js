@@ -4,7 +4,7 @@ const env = require('dotenv');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 //--router
-const userRoutes = require('./routes/user');
+const adminRoutes = require('./routes/admin/auth');
 env.config();
 
 //mongo cconnect
@@ -23,7 +23,7 @@ mongoose.connect(
 
 //app.use(express.json());
 app.use(bodyParser());
-app.use('/api',userRoutes);
+app.use('/api',adminRoutes);
 /*
 app.get('/',function(req,res,next){
     res.status(200).json({
