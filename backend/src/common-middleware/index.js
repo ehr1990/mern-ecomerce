@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 exports.requireSignin = (req,res,next)=>{
-   
+    console.log('yyyyyyyyy',req.headers.authorization);
     if(req.headers.authorization)
     {
         const token = req.headers.authorization.split(" ")[1];
