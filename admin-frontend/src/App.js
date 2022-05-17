@@ -5,7 +5,7 @@ import Home from './containers/Home'
 import Signin from './containers/Signin'
 import Signup from './containers/Signup'
 import PrivateRoute from './components/HOC/privateRoute'
-import { isUserLoggedIn } from './actions';
+import { isUserLoggedIn,getInitialData } from './actions';
 import {useDispatch , useSelector} from 'react-redux';
 import Products from './containers/products';
 import Orders from './containers/orders';
@@ -21,6 +21,7 @@ function App() {
     {
         dispatch(isUserLoggedIn())
     }
+    //dispatch(getInitialData())
 }, []);
 
   return (

@@ -1,7 +1,7 @@
 import  {productConstants} from './constants';
 import axios from '../helpers/axios'
 
-export const addProduct = ()=>{
+export const addProduct = (form)=>{
     return async dispatch =>{
         
         dispatch({type:productConstants.ADD_NEW_PRODUCT_REQUEST});
